@@ -49,10 +49,11 @@ class Main():
         tags = l_data['hits'][parent]['tags']
         download_url = l_data['hits'][parent]['webformatURL']
         self.download(page_url, tags, download_url)
+        parent += 1  
       except Exception as e:
         pass
 
-      parent += 1
+      
 
   def download(self, page_url, tags, download_url):
     self.page_url = page_url
@@ -81,7 +82,7 @@ class Main():
           if chunk:
             f.write(chunk)
       print("download succesfull")
-      prit("pubishing")
+      print("pubishing")
       logger.info(filename)
 
       self.publish(page_url,tags,filename)
@@ -89,10 +90,7 @@ class Main():
     except Exception:
       pass
 
-    except Exception:
-      print("error")
-
-  def publish(self, page_url, tags):
+  def publish(self, page_url, tags,filename):
     self.page_url = page_url
     self.tags = tags
     self.filename = filename
