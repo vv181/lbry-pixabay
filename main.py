@@ -39,6 +39,7 @@ class Main():
       tags = l_data['hits'][parent]['tags']
       download_url = l_data['hits'][parent]['webformatURL']
       self.download(page_url,tags,download_url)
+      parent += 1
 
   def download(self,page_url,tags,download_url):
     self.page_url = page_url
