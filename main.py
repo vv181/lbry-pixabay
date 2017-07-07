@@ -44,10 +44,14 @@ class Main():
     # parse search
     parent = 0
     while parent <= self.pics:
-      page_url = l_data['hits'][parent]['pageURL']
-      tags = l_data['hits'][parent]['tags']
-      download_url = l_data['hits'][parent]['webformatURL']
-      self.download(page_url, tags, download_url)
+      try:
+        page_url = l_data['hits'][parent]['pageURL']
+        tags = l_data['hits'][parent]['tags']
+        download_url = l_data['hits'][parent]['webformatURL']
+        self.download(page_url, tags, download_url)
+      except Exception as e:
+        pass
+
       parent += 1
 
   def download(self, page_url, tags, download_url):
@@ -77,6 +81,7 @@ class Main():
           if chunk:
             f.write(chunk)
       print("download succesfull")
+      prit("pubishing")
       logger.info(filename)
 
       self.publish(page_url,tags,filename)
