@@ -1,0 +1,8 @@
+certifi==2017.4.17
+chardet==3.0.4
+idna==2.5
+pkg-resources==0.0.0
+python-pixabay==1.1 
+-e git+https://github.com/lbryio/lbry.git@03db114ba8f8a50d370177f75e72e55772d1ab31#egg=lbrynet
+requests==2.13.0
+urllib3==1.21.1

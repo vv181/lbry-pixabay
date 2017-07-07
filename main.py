@@ -9,16 +9,15 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
+conf.initialize_settings()
+client = LBRYAPIClient.get_client()
 
 class Main():
   def __init__(self, api, query, nfsw, pics):
-
-    conf.initialize_settings()
-    client = LBRYAPIClient.get_client()
     self.api = Pixabay(api)
     self.query = query
     self.nfsw = nfsw
-    self.pics = int(pics) - 1
+    self.pics = pics
     self.search()
 
   #img_search = pix.image_search()
@@ -85,12 +84,12 @@ class Main():
       print("pubishing")
       logger.info(filename)
 
-      self.publish(page_url,tags,filename)
+      self.publish(page_url, tags, filename)
 
     except Exception:
       pass
 
-  def publish(self, page_url, tags,filename):
+  def publish(self, page_url, tags, filename):
     self.page_url = page_url
     self.tags = tags
     self.filename = filename
@@ -113,7 +112,7 @@ print("Enter API key: ")
 api = raw_input()
 print("Enter Query: ")
 query = raw_input()
-print("Is Pics Safe for Work?: ")
+print("Is Pics Safe for Work?: true or false")
 nfsw = raw_input()
 print("Enter Pics: ")
 pics = raw_input()
