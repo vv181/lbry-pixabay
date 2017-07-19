@@ -4,7 +4,9 @@ lbry-pixabay is parser for [pixabay](https://pixabay.com/), all content will be 
 
 # Installation
 1.Run lbry daemon
+
 2.pip install -r requirements.txt
+
 3.run main.py
 
 
