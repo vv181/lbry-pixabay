@@ -9,11 +9,10 @@ lbry-pixabay is parser for [pixabay](https://pixabay.com/), all content will be 
 
 
 
->>>Enter API key 
+>>>Enter API key    // Enter Pixabat API
 
->>>Enter Query: ")
+>>>Enter Query:     // Enter Image Description
 
->>>Is Pics Safe for Work?: true or false
+>>>Is Picture NSFW? // 'true' or 'false'
 
->>>Enter Pics:
-
+>>>How Many Picture?// How many picture you want to publish to lbry
