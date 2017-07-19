@@ -112,9 +112,9 @@ print("Enter API key: ")
 api = raw_input()
 print("Enter Query: ")
 query = raw_input()
-print("Is Pics Safe for Work?: true or false")
+print("Is picture nsfw?:")
 nfsw = raw_input()
-print("Enter Pics: ")
+print("How Much Picture?: ")
 pics = raw_input()
 
 
