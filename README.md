@@ -3,11 +3,13 @@
 lbry-pixabay is parser for [pixabay](https://pixabay.com/), all content will be published to lbry network.
 
 # Installation
-1.Run lbry daemon
+1.install [lbry-daemon](https://github.com/lbryio/lbry/blob/master/INSTALL.md)
 
-2.pip install -r requirements.txt
+2.Run lbry daemon
 
-3.run main.py
+3.pip install -r requirements.txt
+
+4.run main.py
 
 
 
