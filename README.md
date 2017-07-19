@@ -10,7 +10,10 @@ lbry-pixabay is parser for [pixabay](https://pixabay.com/), all content will be 
 
 
 >>>Enter API key 
+
 >>>Enter Query: ")
+
 >>>Is Pics Safe for Work?: true or false
+
 >>>Enter Pics:
 
